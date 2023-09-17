@@ -40,7 +40,7 @@ def submit():
     canvas_widget.pack()
     
     # Add a close button to close the popup window
-    close_button = ttk.Button(popup_window, text="Close", command=popup_window.destroy, style='TButtonGreen', width=15)
+    close_button = ttk.Button(popup_window, text="Close", command=popup_window.destroy, width=15)
     close_button.pack(pady=10)
 
 def exit_app():
