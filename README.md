@@ -1,7 +1,5 @@
 # AnomaLife
 
-![AnomaLife Logo](https://example.com/anomalife-logo.png)
-
 AnomaLife is a community health improvement project developed during
 HackMIT 2023. Our team's goal is to create a suite of integrated systems to
 improve community health and reduce the load on existing healthcare
@@ -92,7 +90,7 @@ enhancements:
 
 ## Contributors
 
-- CJ (GitHub: github.com/cjdev)
+- CJ (GitHub: github.com/cjhi)
 - Luke (GitHub: github.com/lhwitten)
 - Jason (GitHub: github.com/jjz17)
-- Vikrash (GitHub: github.com/vikrashdev)
+- Vikrash (GitHub: github.com/rivcode)
