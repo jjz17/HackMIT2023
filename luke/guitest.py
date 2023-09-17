@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
-from tkinter import messagebox
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 
 def submit():
     user_id = user_id_entry.get()
@@ -9,27 +10,37 @@ def submit():
 
     # You can perform actions with the user inputs here, such as sending them to your FastAPI backend
 
-    # For now, we will just print them
-    print(f"User ID: {user_id}")
-    print(f"Start Time: {start_time}")
-    print(f"End Time: {end_time}")
-
     # Create and display a popup window with some contents
     popup_window = tk.Toplevel(root)
     popup_window.title("Anomaly Detection Results")
-    popup_window.geometry("400x200")
+    popup_window.geometry("800x600")
     
     # Contents of the popup window
-    popup_label = ttk.Label(popup_window, text="Anomaly Detection Results", font=('Helvetica', 16), background='light gray', foreground='black')
+    popup_label = ttk.Label(popup_window, text="Anomaly Detection Results", font=('Helvetica', 16), background='black', foreground='white')
     popup_label.pack(pady=10)
     
-    # Replace this with the actual results from your anomaly detection process
-    results_text = "Results will be displayed here."
-    results_label = ttk.Label(popup_window, text=results_text, font=('Helvetica', 14), background='light gray', foreground='black')
-    results_label.pack(pady=10)
+    # Display the input values
+    input_values_label = ttk.Label(popup_window, text=f"User ID: {user_id}\nStart Time: {start_time}\nEnd Time: {end_time}", font=('Helvetica', 14), background='black', foreground='white')
+    input_values_label.pack(pady=10)
+    
+    # Generate sample data for the histogram
+    import numpy as np
+    data = np.random.normal(size=1000)
+    
+    # Create a Matplotlib figure and add a histogram
+    fig, ax = plt.subplots(figsize=(6, 4))
+    ax.hist(data, bins=20, color='blue', alpha=0.7)
+    ax.set_xlabel('Value')
+    ax.set_ylabel('Frequency')
+    ax.set_title('Histogram')
+    
+    # Embed the Matplotlib figure in the Tkinter window
+    canvas = FigureCanvasTkAgg(fig, master=popup_window)
+    canvas_widget = canvas.get_tk_widget()
+    canvas_widget.pack()
     
     # Add a close button to close the popup window
-    close_button = ttk.Button(popup_window, text="Close", command=popup_window.destroy, width=15)
+    close_button = ttk.Button(popup_window, text="Close", command=popup_window.destroy, style='TButtonGreen', width=15)
     close_button.pack(pady=10)
 
 def exit_app():
