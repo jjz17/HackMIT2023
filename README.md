@@ -8,14 +8,15 @@ Vikrash.
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Future Work](#future-work)
-- [Dependencies](#dependencies)
-- [Contributors](#contributors)
-- [License](#license)
+- [AnomaLife](#anomalife)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Future Work](#future-work)
+  - [Technologies Used](#technologies-used)
+  - [Contributors](#contributors)
 
 ## Overview
 
@@ -52,9 +53,16 @@ To set up AnomaLife locally, follow these steps:
 2. Install the required dependencies:
 
    ```bash
-   Copy code
-   pip install python-terra plotly streamlit
-   Run the Streamlit app:
+   python3 -m venv .venv
+   . .venv/bin/activate
+   pip install -r requirements.txt
+   ```
+
+3. Run services
+   ```bash
+   ngrok http 8000
+   uvicorn jason.main:app --reload
+   streamlit run jason/frontend.py
    ```
 
 ## Usage
@@ -80,13 +88,14 @@ enhancements:
 - Utilize our analysis and tracking capabilities to help perform automatic
   triaging tasks in emergency room settings.
 
-## Dependencies
+## Technologies Used
 
 - python-terra - Python library for interfacing with the Terra API.
 - Plotly - Python graphing library for creating interactive, publication-quality
   graphs.
 - Streamlit - Python web app framework for creating custom web applications for
   data science and machine learning.
+- Pandas - Python library for data science workflows
 
 ## Contributors
 
