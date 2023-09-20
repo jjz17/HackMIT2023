@@ -6,6 +6,8 @@ improve community health and reduce the load on existing healthcare
 infrastructure. This project is a collaboration between CJ, Luke, Jason, and
 Vikrash.
 
+Slides Link: https://docs.google.com/presentation/d/1riZoUY-gvzTnAkq94Iee_P480jm60Q6byfHW-VymHDY/edit#slide=id.g1e7bb606b76_3_174
+
 ## Table of Contents
 
 - [AnomaLife](#anomalife)
