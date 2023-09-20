@@ -2,7 +2,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import requests
-from terra_utils import get_daily_data, extract_relevant_features
+from terra_api_utils import get_daily_data, extract_relevant_features
 from bocd_utils import bocd_analysis
 import pandas as pd
 from datetime import datetime, timedelta

@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Query
 from fastapi.responses import JSONResponse
 from terra.base_client import Terra
-from jason.terra_utils import get_daily_data, extract_relevant_features
+from jason.terra_api_utils import get_daily_data, extract_relevant_features
 from pydantic import BaseModel
 import typing
 import json
